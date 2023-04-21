@@ -1,13 +1,9 @@
-# SPDX-FileCopyrightText: 2017 Limor Fried for Adafruit Industries
-#
-# SPDX-License-Identifier: MIT
-
 import time
 
 import adafruit_dht
 import board
 
-dht = adafruit_dht.DHT11(board.D5)
+dht = adafruit_dht.DHT11(board.TX)
 temp = []
 hum = [10] 
 val_temp = 0 

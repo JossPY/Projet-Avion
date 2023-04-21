@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2017 Limor Fried for Adafruit Industries
 #
 # SPDX-License-Identifier: MIT
 
@@ -12,14 +13,14 @@ import board
 import pwmio
 from adafruit_motor import motor
 
-dht = adafruit_dht.DHT11(board.D5)
+dht = adafruit_dht.DHT11(board.A2)
 
 led1 = DigitalInOut(board.LED)
 led1.direction = Direction.OUTPUT
 
 rgb = neopixel.NeoPixel(board.NEOPIXEL,8 , auto_write=False)
 # Création d'un objet pour le capteur de distance
-sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.A5, echo_pin=board.A4)
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.A1, echo_pin=board.A0)
 
 #dictionnaire des couleur by Arthur
 dictColor = {
